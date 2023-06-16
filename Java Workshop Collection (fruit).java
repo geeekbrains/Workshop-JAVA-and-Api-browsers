@@ -17,21 +17,37 @@ public class Main {
         hashMap.put(2, "banana");
         hashMap.put(3, "cherry");
         hashMap.put(4, "watermelon");
-    
+     Integer bananaValue = getKeyByValue(hashMap, "banana");
+        Integer watermelonValue = getKeyByValue(hashMap, "watermelon");
+
+        if (bananaValue != null && watermelonValue != null) {
+            int result = bananaValue - watermelonValue;
+            System.out.println(result);
+        } else {
+            System.out.println("One or both values are not found in the HashMap.");
+        }
+        
+        
         TreeSet<String> treeSet = new TreeSet<>();
         treeSet.add("apple");
         treeSet.add("banana");
         treeSet.add("cherry");
         treeSet.add("watermelon");
         
-    String bananaValue = hashMap.get(2);
-        String watermelonValue = hashMap.get(4);
-
-        if (bananaValue != null && watermelonValue != null) {
-            int result = bananaValue.length() - watermelonValue.length();
-            System.out.println(result);
+if (!treeSet.isEmpty()) {
+            String firstElement = treeSet.first();
+            System.out.println("First element in the sorted TreeSet: " + firstElement);
         } else {
-            System.out.println("One or both values are not found in the HashMap.");
+            System.out.println("The TreeSet is empty.");
         }
+    }
+
+    private static Integer getKeyByValue(HashMap<Integer, String> hashMap, String value) {
+        for (Integer key : hashMap.keySet()) {
+            if (hashMap.get(key).equals(value)) {
+                return key;
+            }
+        }
+        return null;
     }
 }
