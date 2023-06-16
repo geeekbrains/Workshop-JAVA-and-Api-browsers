@@ -24,6 +24,14 @@ public class Main {
         treeSet.add("cherry");
         treeSet.add("watermelon");
         
-        System.out.println(result);
+    String bananaValue = hashMap.get(2);
+        String watermelonValue = hashMap.get(4);
+
+        if (bananaValue != null && watermelonValue != null) {
+            int result = bananaValue.length() - watermelonValue.length();
+            System.out.println(result);
+        } else {
+            System.out.println("One or both values are not found in the HashMap.");
+        }
     }
 }
