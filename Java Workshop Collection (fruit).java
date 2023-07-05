@@ -11,13 +11,12 @@ public class Main {
         arrayList.add("cherry");
         arrayList.add("watermelon");
 
-
         HashMap<Integer, String> hashMap = new HashMap<>();
         hashMap.put(1, "apple");
         hashMap.put(2, "banana");
         hashMap.put(3, "cherry");
         hashMap.put(4, "watermelon");
-     Integer bananaValue = getKeyByValue(hashMap, "banana");
+        Integer bananaValue = getKeyByValue(hashMap, "banana");
         Integer watermelonValue = getKeyByValue(hashMap, "watermelon");
 
         if (bananaValue != null && watermelonValue != null) {
@@ -26,8 +25,7 @@ public class Main {
         } else {
             System.out.println("One or both values are not found in the HashMap.");
         }
-        
-        
+             
         TreeSet<String> treeSet = new TreeSet<>();
         treeSet.add("apple");
         treeSet.add("banana");
